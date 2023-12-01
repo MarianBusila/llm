@@ -1,0 +1,9 @@
+streamlit
+openai==0.28
+python-dotenv
+diffusers==0.10.2
+transformers
+scipy
+ftfy
+accelerate
+pytorch
