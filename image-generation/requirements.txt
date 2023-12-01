@@ -6,4 +6,3 @@ transformers
 scipy
 ftfy
 accelerate
-pytorch
