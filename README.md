@@ -23,3 +23,4 @@ Note: samples were run on a Windows 10 OS using Python 3.11.5. The setup instruc
 - [Youtube summarizer with OpenAI Whisper and LLama2](youtube-summary/README.md)
 - [Text to image generation with OpenAI DALL-E and HuggingFace Diffusers](image-generation/README.md)
 - [AI Trends Agents](crewai-ai-trends/README.md)
+- [Image analyzer with Imp-V1-3B multimodal small language model](image-analyzer/README.md)
