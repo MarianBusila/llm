@@ -4,3 +4,4 @@ transformers
 pillow
 accelerate
 einops
+streamlit
