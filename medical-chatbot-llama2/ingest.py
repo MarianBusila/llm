@@ -1,7 +1,7 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import PyPDFLoader, DirectoryLoader
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
 
 DATA_PATH = "data/"
 DB_FAISS_PATH = "vectorstores/db_faiss"
@@ -14,7 +14,10 @@ def create_vector_db():
     texts = text_splitter.split_documents(documents)
 
     embeddings = HuggingFaceEmbeddings(model_name = "sentence-transformers/all-MiniLM-L6-v2", 
-                                       model_kwargs = {'device': 'cpu'})
+                                       model_kwargs = {
+                                        'device': 'cpu',
+                                        'tokenizer_kwargs': {'clean_up_tokenization_spaces': True}
+                                        })
     
     db = FAISS.from_documents(texts, embeddings)
     db.save_local(DB_FAISS_PATH)
