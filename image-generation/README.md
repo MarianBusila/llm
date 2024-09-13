@@ -15,11 +15,12 @@ Using:
 
 Setup:
 
-- create `.env` file and set the OpenAPI key there
+- create `.env` file and set the OpenAPI key and HuggingFace Token
 ```
 OPEN_API_KEY={INSERT_KEY_HERE}
+HF_TOKEN={INSERT_TOKEN_HERE}
 ```
-- go to [Pytorch website](https://pytorch.org/) and select the combo specific to your system. The command generated helped in the setup of requirements.txt.
+- go to [Pytorch website](https://pytorch.org/) and select the combo specific to your system. Run the command.
 ![](img/pytorch-install.png)
 
 - go to [NVidia CUDA Toolkit download page](https://developer.nvidia.com/cuda-toolkit-archive) and download the version of cuda, you selected above. Install it.

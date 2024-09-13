@@ -3,11 +3,13 @@ import os
 from dotenv import load_dotenv
 import openai
 from diffusers import DiffusionPipeline
+from huggingface_hub import login
 import torch
 
 load_dotenv()
 
 openai.api_key = os.getenv("OPEN_API_KEY")
+hugging_face_token = os.getenv("HF_TOKEN")
 
 def generate_image_using_openai(input_prompt):
     response = openai.Image.create(
@@ -19,13 +21,15 @@ def generate_image_using_openai(input_prompt):
     return image_url
 
 def generate_image_using_huggingface_diffusers(input_prompt, number_of_images):
-    pipe = DiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", torch_dtype=torch.float16)    
+    login(token=hugging_face_token)
+    pipe = DiffusionPipeline.from_pretrained("benjamin-paine/stable-diffusion-v1-5", torch_dtype=torch.float16)
     pipe = pipe.to("cuda")
     prompt = [input_prompt] * number_of_images
     images = pipe(prompt).images
     return images
 
 def generate_image_using_sdxl_turbo(input_prompt, number_of_images):
+    login(token=hugging_face_token)
     pipe = DiffusionPipeline.from_pretrained("stabilityai/sdxl-turbo", use_safetensors=True)
     pipe = pipe.to("cpu")
     prompt = [input_prompt] * number_of_images
