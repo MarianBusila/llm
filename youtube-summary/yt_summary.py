@@ -1,5 +1,5 @@
 import streamlit as st
-from pytube import YouTube
+import yt_dlp
 from haystack.nodes import PromptModel, PromptNode
 from haystack.nodes.audio import WhisperTranscriber
 from haystack.pipelines import Pipeline
@@ -12,9 +12,23 @@ st.set_page_config(
 )
 
 def download_video(url):
-    yt = YouTube(url)
-    video = yt.streams.filter(abr='160kbps').last()
-    return video.download()
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }],
+        'outtmpl': '%(title)s.%(ext)s',
+    }
+    
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=True)
+            return info['title'] + ".mp3"
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return None
 
 def initialize_model(full_path):
     return PromptModel(

@@ -1,7 +1,8 @@
-farm-haystack
-streamlit
-torch
-pytube
+farm-haystack==1.26.3
+streamlit==1.38.0
+torch==2.4.1
+yt-dlp==2024.8.6
+ffmpeg-python==0.2.0
 git+https://github.com/openai/whisper.git
-https://github.com/abetlen/llama-cpp-python/releases/download/v0.2.19/llama_cpp_python-0.2.19-cp311-cp311-win_amd64.whl
-cached_property
+https://github.com/abetlen/llama-cpp-python/releases/download/v0.2.90/llama_cpp_python-0.2.90-cp312-cp312-win_amd64.whl
+cached_property==1.5.2
