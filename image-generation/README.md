@@ -17,8 +17,8 @@ Setup:
 
 - create `.env` file and set the OpenAPI key and HuggingFace Token
 ```
-OPEN_API_KEY={INSERT_KEY_HERE}
-HF_TOKEN={INSERT_TOKEN_HERE}
+OPEN_API_KEY=INSERT_KEY_HERE
+HF_TOKEN=INSERT_TOKEN_HERE
 ```
 - go to [Pytorch website](https://pytorch.org/) and select the combo specific to your system. Run the command.
 ![](img/pytorch-install.png)
