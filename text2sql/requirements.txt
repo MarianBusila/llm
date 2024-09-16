@@ -1,0 +1,3 @@
+langchain-community==0.2.17
+psycopg2-binary==2.9.9
+llama-cpp-python==0.2.90
