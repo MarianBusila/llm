@@ -7,10 +7,9 @@ torchvision==0.17.2
 matplotlib==3.9.2
 scikit-image==0.24.0
 qdrant-client==1.12.1
-llama-index-embeddings-clip==0.3.0
-llama-index-multi-modal-llms-openai==0.3.0
 llama-index-vector-stores-qdrant==0.4.0
 llama-index
 git+https://github.com/openai/CLIP.git
+llama-index-embeddings-clip==0.3.0
 wikipedia==1.4.0
 python-dotenv==1.0.1
