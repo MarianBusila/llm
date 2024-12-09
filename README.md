@@ -28,3 +28,4 @@ Note: samples were run on a Windows 10 OS using Python 3.11.5. The setup instruc
 - [Answer questions from a Postgres database with LLama2](text2sql/README.md)
 - [Multi-modal RAG - Embeddings Retrieval](multimodal_rag_embeddings/README.md)
 - [Multi-modal RAG - Retrieval, Prompt augmentation and Response Generation with GPT4](multimodal_rag_gpt4/README.md)
+- [Chat with code from Github Repo](chat_with_code/README.md)
