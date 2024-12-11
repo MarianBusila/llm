@@ -9,13 +9,14 @@ Using:
 Setup
 
 ```
-ollama run llama3:8b-instruct-q4_1
+ollama run qwen2.5:14b-instruct-q4_1
 ```
 
 ```
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
+python app.py
 ```
 
 Architecture
