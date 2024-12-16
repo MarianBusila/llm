@@ -1,0 +1,10 @@
+langchain==0.3.12
+langchain_community==0.3.11
+tiktoken==0.8.0
+langchain-nomic==0.1.4
+nomic[local]==3.3.4
+langchain-ollama==0.2.1
+scikit-learn==1.6.0
+langgraph==0.2.59
+tavily-python==0.5.0
+bs4==0.0.2
