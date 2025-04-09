@@ -15,3 +15,4 @@ pip install -r requirements.txt
 ```
 
 - **prompting.ipynb** - contains examples of setting generation parameters, enum and json prompting, few shotp, Chain of Thought, ReAct, code generation, execution and explanation
+- **evaluation.ipynb** - examples on how to use an LLM as an evaluator for answers provided by another LLM
