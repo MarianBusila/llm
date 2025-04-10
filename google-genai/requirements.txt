@@ -1,3 +1,4 @@
 google-genai==1.7.0
 google-api-core==2.24.2
 dotenv==0.9.9
+chromadb==0.6.3
