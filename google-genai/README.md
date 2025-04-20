@@ -18,3 +18,4 @@ pip install -r requirements.txt
 - **evaluation.ipynb** - examples on how to use an LLM as an evaluator for answers provided by another LLM
 - **qa_rag.ipynb** - RAG sample using ChromaDB
 - **embeddings_sim_score.ipynb** - calculate similarity scores for embeddings
+- **classification_embeddings_keras.ipynb** - classification using embeddings and Keras

@@ -4,3 +4,6 @@ dotenv==0.9.9
 chromadb==0.6.3
 pandas==2.2.3
 seaborn==0.13.2
+keras==3.9.2
+tensorflow==2.19.0
+scikit-learn
