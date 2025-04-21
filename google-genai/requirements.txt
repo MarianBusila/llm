@@ -8,3 +8,6 @@ keras==3.9.2
 tensorflow==2.19.0
 scikit-learn
 ipython-sql
+langgraph==0.3.21
+langchain-google-genai==2.1.2
+langgraph-prebuilt==0.1.7

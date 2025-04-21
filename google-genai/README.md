@@ -20,3 +20,4 @@ pip install -r requirements.txt
 - **embeddings_sim_score.ipynb** - calculate similarity scores for embeddings
 - **classification_embeddings_keras.ipynb** - classification using embeddings and Keras
 - **function_calling.ipynb** - build a chat interface over a local database using Gemini API's automatic function calling
+- **langgraph_agent.ipynb** - cafe ordering system using langgraph
